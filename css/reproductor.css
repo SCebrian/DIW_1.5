@@ -1,0 +1,260 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    padding-top: 20px;
+    text-align: center;
+    background-color: white; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to top, rgb(227,  76,  38,0), rgb(240,  101,  41,90) );
+}
+html{
+    background-color: white;
+}
+#page{
+    width: 960px;
+    margin: 0px auto 0px auto;
+    text-align: left;
+    box-shadow: 10px 10px 10px gray;
+    border-radius: 20px;
+}
+/* Cabecera principal */
+#page > header{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 1em;
+    background-image: linear-gradient(to top,#0170B9, #27AADE );
+    border-bottom: solid 6px black;
+    border-radius: 20px 20px 0px 00px;
+}
+
+h1{
+    position: relative;
+    padding: 20px 100px ;
+}
+h1 > img {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+/* Menú principal de navegación */
+#page > nav{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4em;
+    color: silver;
+    text-align: center;
+    background-image: linear-gradient(rgb(213, 186, 50), rgb(255, 218, 62));
+}
+
+/* Elementos del menu principal */
+#page > nav > ul > li {
+    padding-top: 80px ;
+    margin: 0px 100px 20px 100px;
+    display: inline-block;
+    list-style: none;
+    cursor: default;
+    text-align: center;
+}
+
+/* Contenidos */
+#page > nav > ul > li:first-child{
+    background-image: url("../imgs/book.png");
+    background-repeat: no-repeat;
+    background-position: center 10px;
+}
+
+/* Vídeos */
+#page > nav > ul > li:nth-child(2n) {
+    background-image: url("../imgs/film.png");
+    background-repeat: no-repeat;
+    background-position: center 10px;
+
+    position: relative;
+}
+
+/* Menú de vídeos */
+#page > nav > ul > li:nth-child(2) ul{
+    position: absolute;
+    z-index: 2;
+    list-style: none;
+    width: 100px;
+    text-align: center;
+    left: 50%; 
+    margin-left: -50px;
+    /* top:25px; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-size: 0.7em;
+    height: 0px;
+    overflow: hidden; 
+
+    transition: height 0.4s linear;
+    /* PREF NAVEGADORES */
+    -webkit-transition: height 0.4s linear;
+    -moz-transition: height 0.4s linear;
+    -o-transition: height 0.4s linear;
+    -ms-transition: height 0.4s linear;
+}
+
+/* activacion de la transformacion de ul */
+#page > nav > ul > li:nth-child(2):hover ul {
+    height: 200px;
+}
+
+/* Efectos de la lista */
+nav > ul > li:nth-child(2) ul li:first-child:before {
+    content:'';
+    position:absolute;
+    width:1px;
+    height:1px;
+    border:5px solid transparent;
+    border-bottom-color: #e34c26;
+    left:50%;
+    top:-10px;
+    margin-left:-5px;
+    
+}
+/* elementos LI del segundo ul */
+nav > ul > li:nth-child(2) > ul > li {
+    background-color: #e34c26;
+    padding: 12px;
+}
+/* Primer elemento LI de ul li */
+nav > ul > li:nth-child(2) ul li:first-child{ 
+    border-radius: 3px 3px 0px 0px;
+    margin-top: 10px;
+    position: relative;
+}
+/* Ultimo elemento LI de ul li */
+nav > ul > li > ul > li:last-child { 
+    border-radius: 0px 0px 3px 3px;
+}
+/* Elementos impares */
+nav > ul > li:nth-child(2) > ul > li:nth-child(odd){
+    background-color: #f06529;
+} 
+/* hover de los LI segunda lista */
+nav > ul > li:nth-child(2) > ul > li:hover {
+    background-color :#ff7e42;
+    
+}
+/* Elementos A de la segunda lista */
+nav > ul > li:nth-child(2) > ul > li > a {
+    text-decoration: none; 
+    display: block;
+    color: white;
+}
+
+
+/* Contacto */
+#page > nav > ul >li:last-child{
+    background-image: url("../imgs/mail.png");
+    background-repeat: no-repeat;
+    background-position: center 10px;
+}
+
+.clearfix:before,
+.clearfix:after,
+
+/* TODOS los enlaces menú ppal */
+#page > nav > ul >li > a{
+    color: white;
+    text-decoration: none;
+    text-shadow: 0px 0px 5px white;
+    transition: text-shadow 0.4s;
+}
+#page > nav > ul >li > a:hover{
+    text-shadow: 2px 2px 0px red;
+    color: white;
+}
+main {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+    background-color: white;
+    width: 100%;
+    display: table;
+}
+
+/* FOOTER */
+footer{
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(to bottom,#0170B9, #27AADE );
+    border-top: solid 6px black;
+    padding: 15px 0px 15px 0px;
+    border-radius: 0px 0px 20px 20px;
+    
+}
+
+span{
+    font-weight: bold;
+}
+
+/* estilos para el reproductor de vídeo */
+
+#reproductor {
+	float:left;
+	width: 720px;
+	margin: 20px;
+	padding: 5px;
+	background: #999999;
+	border: 1px solid #666666;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+} 
+
+main nav {
+	float: left;
+	margin: 10px auto;
+	width: 100px;
+}
+
+main nav label {
+	margin: 10px;
+}
+
+input[type="button"] {
+    width: 80px;
+    margin: 10px;
+    display: block;
+	
+    background: -webkit-linear-gradient(top,#f06529,#e34c26);
+    background: -moz-linear-gradient(top,#f06529,#e34c26);
+    background: -o-linear-gradient(top,#f06529,#e34c26);
+    background: linear-gradient(to bottom,#f06529,#e34c26);
+	
+    border: 1px solid rgb(180, 80, 121);
+	
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;  
+    border-radius: 5px;
+	
+    padding: .4em;
+    color: white;
+    text-decoration:none;
+}
+
+input[type="button"]:hover {
+    background: -webkit-linear-gradient(top,#ff6529,#f34c26);
+    background: -moz-linear-gradient(top,#ff6529,#f34c26);
+    background: -o-linear-gradient(top,#ff6529,#f34c26);
+    background: linear-gradient(to bottom,#ff6529,#f34c26);
+}
+
+#barra {
+	width: 705px;
+	margin:5px;
+	height: 16px;
+	padding: 2px;
+	border: 1px solid #CCCCCC;
+	background: #EEEEEE;
+} 
+
+#progreso{
+	position: absolute;
+	width: 0px;
+	height: 16px;
+	background: rgba(0,0,150,.2);
+}
