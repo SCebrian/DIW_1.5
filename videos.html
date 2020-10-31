@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos</title>
+    <link rel="stylesheet" href="css/reproductor.css">
+    <!-- La compatibilidad con los navegadores antiguos, vamos a añadir el script HTML Shiv a nuestra página -->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+</head>
+<body>
+    <div id="page">
+        <header>
+            <h1><img src="imgs/logo.png" alt="logo" title="Logotipo">Curso de HTML5 y CSS3</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li ><a href="index.html">Contenidos</a></li>
+                <li ><a href="videos.html">Vídeos</a>
+                    <ul>
+                        <li><a href="videos.html">Vídeos 1</a></li>
+                        <li><a href="videos.html">Vídeos 2</a></li>
+                        <li><a href="videos.html">Vídeos 3</a></li>
+                    </ul>
+                </li>
+                <li ><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div id="reproductor">
+              <video id="medio" width="720" height="400"> <source src="media/trailer.mp4">
+                <source src="media/trailer.ogg">
+              </video>
+              <div id="barra">
+                <div id="progreso"></div>
+              </div>
+            </div>
+            <nav>
+              <input type="button" id="reiniciar" value="reiniciar">
+              <input type="button" id="retrasar" value="&laquo;">
+              <input type="button" id="play" value="&#9658;">
+              <input type="button" id="adelantar" value="&raquo;"> 
+              <input type="button" id="silenciar" value="silenciar">
+              <label>Volumen</label>
+              <input type="button" id="menosVolumen" value="-">
+              <input type="button" id="masVolumen" value="+">
+            </nav>
+          </main>
+          
+
+    
+        <footer>
+            <small>HTML5 y CSS3.<br>Diseño de interfaces web - 2DAW</small>
+        </footer>
+   
+    </div>
+    
+</body>
+</html>
