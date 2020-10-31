@@ -1,0 +1,273 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    padding-top: 20px;
+    text-align: center;
+    background-color: white; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to top, rgb(227,  76,  38,0), rgb(240,  101,  41,90) );
+}
+html{
+    background-color: white;
+}
+#page{
+    width: 960px;
+    margin: 0px auto 0px auto;
+    text-align: left;
+    box-shadow: 10px 10px 10px gray;
+    border-radius: 20px;
+
+}
+/* Cabecera principal */
+#page > header{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 1em;
+    background-image: linear-gradient(to top,#0170B9, #27AADE );
+    border-bottom: solid 6px black;
+    border-radius: 20px 20px 0px 00px;
+}
+
+h1{
+    position: relative;
+    padding: 20px 100px ;
+}
+h1 > img {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+/* Menú principal de navegación */
+#page > nav{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4em;
+    color: silver;
+    text-align: center;
+    background-image: linear-gradient(rgb(213, 186, 50), rgb(255, 218, 62));
+}
+
+/* Elementos del menu principal */
+#page > nav > ul > li {
+    padding-top: 80px ;
+    margin: 0px 100px 20px 100px;
+    display: inline-block;
+    list-style: none;
+    cursor: default;
+    text-align: center;
+}
+
+/* Contenidos */
+#page > nav > ul > li:first-child{
+    background-image: url("../imgs/book.png");
+    background-repeat: no-repeat;
+    background-position: center 10px;
+}
+
+
+
+
+/* Vídeos */
+#page > nav > ul > li:nth-child(2n) {
+    background-image: url("../imgs/film.png");
+    background-repeat: no-repeat;
+    background-position: center 10px;
+
+    position: relative;
+}
+
+/* Menú de vídeos */
+#page > nav > ul > li:nth-child(2) > ul{
+    position: absolute;
+    z-index: 2;
+    list-style: none;
+    width: 100px;
+    text-align: center;
+    left: 50%; 
+    margin-left: -50px;
+    /* top:25px; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-size: 0.7em;
+    height: 0px;
+    overflow: hidden; 
+
+    transition: height 0.4s linear;
+    /* PREF NAVEGADORES */
+    -webkit-transition: height 0.4s linear;
+    -moz-transition: height 0.4s linear;
+    -o-transition: height 0.4s linear;
+    -ms-transition: height 0.4s linear;
+}
+
+/* activacion de la transformacion de ul */
+#page > nav > ul > li:nth-child(2):hover ul {
+    height: 200px;
+}
+
+/* Efectos de la lista */
+nav > ul > li:nth-child(2) ul li:first-child:before {
+    content:'';
+    position:absolute;
+    width:1px;
+    height:1px;
+    border:5px solid transparent;
+    border-bottom-color: #e34c26;
+    left:50%;
+    top:-10px;
+    margin-left:-5px;
+    
+}
+/* elementos LI del segundo ul */
+nav > ul > li:nth-child(2) > ul > li {
+    background-color: #e34c26;
+    padding: 12px;
+}
+/* Primer elemento LI de ul li */
+nav > ul > li:nth-child(2) ul li:first-child{ 
+    border-radius: 3px 3px 0px 0px;
+    margin-top: 10px;
+    position: relative;
+}
+/* Ultimo elemento LI de ul li */
+nav > ul > li > ul > li:last-child { 
+    border-radius: 0px 0px 3px 3px;
+}
+/* Elementos impares */
+nav > ul > li:nth-child(2) > ul > li:nth-child(odd){
+    background-color: #f06529;
+} 
+/* hover de los LI segunda lista */
+nav > ul > li:nth-child(2) > ul > li:hover {
+    background-color :#ff7e42;
+    
+}
+/* Elementos A de la segunda lista */
+nav > ul > li:nth-child(2) > ul > li > a {
+    text-decoration: none; 
+    display: block;
+    color: white;
+}
+
+
+/* Contacto */
+#page > nav > ul >li:last-child{
+
+    background-image: url("../imgs/mail.png");
+    background-repeat: no-repeat;
+    background-position: center 10px;
+}
+.clearfix:before,
+.clearfix:after,
+
+
+/* TODOS los enlaces menú ppal */
+#page > nav > ul >li > a{
+    color: white;
+    text-decoration: none;
+    text-shadow: 0px 0px 5px white;
+    transition: text-shadow 0.4s;
+}
+#page > nav > ul >li > a:hover{
+    text-shadow: 2px 2px 0px red;
+    color: white;
+}
+
+/* Estilos para el resto de la página */
+main {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+    background-color: white;
+    width: 100%;
+    display: table;
+}
+
+article{
+    width: 240px;
+    border: solid 1px lightgray;
+    
+    background-color: white;
+    text-align: center;
+    line-height: 1.8em;
+    padding: 5px 5px 22px 5px;
+    margin: 20px;
+    float: left;
+
+    border-style:solid;
+    border-width:80px 15px 50px 15px;
+    border-image-source:url("../imgs/movil.png");
+    border-image-slice: 70 25 60 25 ;
+}
+
+/* moviles girados (articles) */
+article:first-child{
+    transform: rotate(-2deg);
+}
+article:last-child{
+    transform: rotate(2deg);
+}
+
+/* cabecera de articulos */
+article > header {
+    position: relative;
+} 
+
+.chincheta {
+    position: absolute;
+    width: 35px;
+    height: 49px;
+    top: -94px;
+    background-image: url("../imgs/chincheta.png");
+    z-index: 1;
+}
+
+/* Chincheta 1 */
+article:nth-child(1) > header > div:nth-child(1) {
+    left:202px;
+}
+/* Chincheta 2 */
+article:nth-child(2) > header > div:nth-child(1) {
+    left: 120px;
+}
+/* Chincheta 3 */
+article:nth-child(3) > header > div:nth-child(1)  {
+    left: 30px;
+}
+
+
+
+h2{
+    padding: 10px;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 2px gray;
+    letter-spacing: 0.5em;
+}
+
+/* Fondo de la imagen Javascript */
+#page > main:nth-child(3) > article:nth-child(3) > header:nth-child(1) > img:nth-child(2) {
+    background-image: radial-gradient(circle farthest-side,  #ffffff 0%, #cecece 200%) ;
+}
+
+/* FOOTER */
+
+footer{
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(to bottom,#0170B9, #27AADE );
+    border-top: solid 6px black;
+    padding: 15px 0px 15px 0px;
+    border-radius: 0px 0px 20px 20px;
+    
+}
+
+span{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
